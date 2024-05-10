@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum to Infinity</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        body{
+            background-color:  #c9bab9;
+        }
+        body .main{
+            background-color: #FAF5FF;
+            border-radius: 10px;
+            display: flex;
+  justify-content: center;
+  width: 50vh;
+  height: 50vh;
+  margin-left: 40%;
+  margin-top: 4%;
+        }
+        body .main .content{
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <h1 style="font-family: 'Montserrat'; text-align: center;">Sum To Infinity</h1>
+            <p style="font-family: 'Montserrat'; text-align: center; font-size: small; margin-top: -5%;">by Charles Maxwell K.</p>
+            <form id="sumForm">
+        <label for="num1" style="font-family: 'Montserrat'; text-align: center;">First Term(a):</label>
+        <input type="text" id="num1" name="num1"><br><br>
+        <label for="num2" style="font-family: 'Montserrat'; text-align: center;">Common Ratio(r)</label>
+        <input type="text" id="num2" name="num2"><br><br>
+        <input type="submit" value="Calculate" style="font-family: 'Montserrat'; text-align: center;">
+    </form>
+
+    <div id="result" style="font-family: 'Montserrat'; text-align: center; padding-top: 30px;"></div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="about">
+        <h1 style="font-family: 'Montserrat'; text-align: center; color: #FAF5FF;">About Maxwell</h1>
+        <p style="font-family: 'Montserrat'; text-align: center; padding-left: 20%; padding-right: 20%;">
+            At the tender age of 10, Maxwell delved into the fascinating world of coding. It all began with a curious exploration of HTML, the language that forms the backbone of every webpage. Maxwell was captivated by the idea of creating something tangible on the vast landscape of the internet.
+
+As Maxwell's skills evolved, so did his toolkit. He soon embraced CSS, mastering the art of styling and design. With CSS, he could breathe life into his creations, crafting visually stunning websites that dazzled visitors with their elegance and fluidity.
+
+But Maxwell's thirst for knowledge knew no bounds. He yearned to infuse his websites with interactivity and dynamism. Enter JavaScript – the powerhouse of web development. Armed with this versatile scripting language, Maxwell could weave intricate functionalities into his projects, transforming static webpages into immersive user experiences.
+
+Now, as a seasoned web developer, Maxwell navigates the ever-changing landscape of technology with ease. His projects showcase not only his technical prowess but also his creativity and passion for innovation. Whether it's building sleek portfolios, immersive web applications, or dynamic e-commerce platforms, Maxwell's dedication to his craft shines through in every line of code.
+
+With HTML, CSS, and JavaScript as his trusted companions, Maxwell continues to push the boundaries of what's possible in the realm of web development. And as he embarks on new coding adventures, one thing remains certain – the journey is just beginning for this young coding prodigy.
+
+
+
+
+
+
+
+        </p>
+    </div>
+
+    <script>
+        document.getElementById("sumForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting and reloading the page
+
+    // Get the values entered by the user
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    // Check if the inputs are valid numbers
+    
+
+    // Calculate the sum
+    var sum = num1/(1-num2);
+
+    // Display the result
+    document.getElementById("result").innerText = "The sum to infinity of the series is: " + sum;
+});
+    </script>
+</body>
+</html>
